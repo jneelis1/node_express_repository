@@ -16,7 +16,7 @@ app.get('', (req, res) => {
     con.connect(function(err) {
         con.query(`SELECT * FROM Capstone.scrapes`, function(err, result, fields) {
             if (err) res.send(err);
-            if (result) res.send(result[0]["textfound"]);
+            if (result) res.send(result[1]["textfound"]);
         });
     });
 });
